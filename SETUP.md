@@ -36,6 +36,7 @@ Use the command for your OS/shell:
 - Mac/Linux:  `source .venv/bin/activate`
 - Windows (Command Prompt):  `.venv\Scripts\activate`
 - Windows (PowerShell): `.venv\Scripts\Activate.ps1`
+- Windows (Git Bash / MINGW64): `source .venv/Scripts/activate`
 
 Verify:
 - Run `python --version` → should report a version starting with **Python 3.13**
