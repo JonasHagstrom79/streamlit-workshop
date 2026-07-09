@@ -5,14 +5,16 @@ st.title("Demo Streamlit App")
 
 df = pd.read_csv("state_data.csv")
 
-# Exercise: Change this code to:
-# 1. Ask the user to select a state
-# 2. Have it populate with all the list of unique states
-option = st.selectbox("Select your favorite fruit:", ["Apple", "Banana", "Cherry"])
+# Widget 1: pick a state
+option = st.selectbox("Select a state:", df["State"].unique())
 
-st.write("You selected:", option)
+# Widget 2: pick a single year
+year = st.slider("Select a year:", 2005, 2023, 2020)
 
-# Filter df to just the values the user selected
-# df = ...
+st.write("You selected:", option, "in", year)
+
+# Filter on both state and year
+df = df[df["State"] == option]
+df = df[df["Year"] == year]
 
 st.dataframe(df)
