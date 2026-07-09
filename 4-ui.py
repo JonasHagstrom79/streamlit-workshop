@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-st.title("Demo Streamlit App")
+st.title("Streamlit App")
 
 df = pd.read_csv("state_data.csv")
 
